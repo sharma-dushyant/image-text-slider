@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+import 'package:image_text_slider/models/text_info.dart';
+
+class ImageText extends StatelessWidget {
+  final TextInfo textInfo;
+  const ImageText({super.key, required this.textInfo});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      textInfo.text,
+      style: TextStyle(
+        fontSize: textInfo.fontSize,
+        fontWeight: textInfo.fontWeight,
+        fontStyle: textInfo.fontStyle,
+        color: textInfo.color
+      ),
+    );
+  }
+}
